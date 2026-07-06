@@ -1,0 +1,13 @@
+# Frontend
+cloudsense/node_modules/
+cloudsense/.next/
+cloudsense/.env.local
+
+# Backend
+cloudsense-backend/venv/
+cloudsense-backend/.env
+cloudsense-backend/__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

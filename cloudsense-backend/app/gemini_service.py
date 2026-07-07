@@ -49,10 +49,6 @@ Return exactly in this format:
     "azure_cost": 0,
     "gcp_cost": 0,
 
-    "aws_score": 0,
-    "azure_score": 0,
-    "gcp_score": 0,
-
     "confidence": 0,
     "savings": 0,
     

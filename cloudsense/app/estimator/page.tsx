@@ -21,10 +21,6 @@ interface AnalysisResult {
   azure_cost: number;
   gcp_cost: number;
 
-  aws_score: number;
-  azure_score: number;
-  gcp_score: number;
-
   confidence: number;
   savings: number;
 

@@ -544,72 +544,68 @@ return (
 </div>
 <div className="mt-6">
 
-<h3 className="font-semibold text-slate-700">
-AWS
-</h3>
+  <h3 className="font-semibold text-slate-700">
+    AWS
+  </h3>
 
-<div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+  <div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+    <div
+      className="bg-orange-500 h-3 rounded-full transition-all duration-700"
+      style={{
+        width: `${result?.aws_score}%`,
+      }}
+    ></div>
+  </div>
 
-<div
-className="bg-orange-500 h-3 rounded-full"
-style={{
-width:`${result?.aws_score}%`
-}}
-></div>
-
-</div>
-
-<p className="mt-1">
-{result?.aws_score}%
-</p>
+  <p className="mt-2 text-sm font-bold !text-slate-800">
+    {result?.aws_score}%
+  </p>
 
 </div>
+
 <div className="mt-6">
 
-<h3 className="font-semibold text-slate-700">
-Azure
-</h3>
+  <h3 className="font-semibold text-slate-700">
+    Azure
+  </h3>
 
-<div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+  <div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+    <div
+      className="bg-orange-500 h-3 rounded-full transition-all duration-700"
+      style={{
+        width: `${result?.azure_score}%`,
+      }}
+    ></div>
+  </div>
 
-<div
-className="bg-orange-500 h-3 rounded-full"
-style={{
-width:`${result?.azure_score}%`
-}}
-></div>
-
-</div>
-
-<p className="mt-1">
-{result?.azure_score}%
-</p>
+  <p className="mt-2 text-sm font-bold !text-slate-800">
+    {result?.azure_score}%
+  </p>
 
 </div>
+
 <div className="mt-6">
 
-<h3 className="font-semibold text-slate-700">
-GCP
-</h3>
+  <h3 className="font-semibold text-slate-700">
+    GCP
+  </h3>
 
-<div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+  <div className="w-full bg-slate-200 rounded-full h-3 mt-2">
+    <div
+      className="bg-orange-500 h-3 rounded-full transition-all duration-700"
+      style={{
+        width: `${result?.gcp_score}%`,
+      }}
+    ></div>
+  </div>
 
-<div
-className="bg-orange-500 h-3 rounded-full"
-style={{
-width:`${result?.gcp_score}%`
-}}
-></div>
-
-</div>
-
-<p className="mt-1">
-{result?.gcp_score}%
-</p>
+  <p className="mt-2 text-sm font-bold !text-slate-800">
+    {result?.gcp_score}%
+  </p>
 
 </div>
 
-          </div>
+</div>
 
           {/* AI Project Summary */}
           <div className="bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">

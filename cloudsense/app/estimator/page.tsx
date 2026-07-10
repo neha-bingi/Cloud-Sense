@@ -59,20 +59,24 @@ export default function EstimatorPage() {
           index = (index + 1) % loadingMessages.length;
           setLoadingMessage(loadingMessages[index]);
          }, 1200);
-
+  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/analyze`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+     const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/analyze`,
+    {
+     method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+     },
         body: JSON.stringify({
           description,
-        }),
-      });
-
+    }),
+    }
+    );
       if (!response.ok) {
-          throw new Error("Server error");
+        const errorText = await response.text();
+        console.log("Backend Error:", errorText);
+        throw new Error(errorText);
       }
       const data = await response.json();
 

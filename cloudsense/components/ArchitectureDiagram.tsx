@@ -37,6 +37,8 @@ const Box = ({
 export default function ArchitectureDiagram({ provider }: Props) {
   if (!provider) return null;
 
+  const normalizedProvider = provider.toLowerCase();
+
   return (
     <div className="mt-10 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 
@@ -46,7 +48,7 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* AWS */}
 
-      {provider === "AWS" && (
+      {normalizedProvider.includes("aws")&& (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">
@@ -88,7 +90,7 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* Azure */}
 
-      {provider === "Azure" && (
+      {normalizedProvider.includes("azure") && (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">
@@ -130,7 +132,8 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* GCP */}
 
-      {provider === "GCP" && (
+      {normalizedProvider.includes("gcp") ||
+        normalizedProvider.includes("google") && (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">

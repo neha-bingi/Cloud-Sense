@@ -45,6 +45,9 @@ export default function ArchitectureDiagram({ provider }: Props) {
       <h2 className="text-2xl font-bold text-center mb-8 text-slate-800">
         Cloud Architecture Diagram
       </h2>
+      <p className="text-center text-red-600 font-bold mb-6">
+        Provider received: {String(provider)}
+      </p>
 
       {/* AWS */}
 

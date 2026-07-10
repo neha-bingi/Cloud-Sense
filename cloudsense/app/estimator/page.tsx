@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import jsPDF from "jspdf";
 import CostChart from "@/components/CostChart";
-import ArchitectureRecommendation from "@/components/ArchitectureRecommendation";
 import OptimizationPanel from "@/components/OptimizationPanel";
 import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 
@@ -542,7 +541,7 @@ return (
           </div>
 
           {/* AI Project Summary */}
-          <div className="bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div className=" mt-8 bg-white rounded-3xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
             <h2 className="text-2xl font-bold mb-4 text-slate-800">
               AI Project Summary
             </h2>
@@ -655,11 +654,7 @@ return (
           <div className="mt-10">
             <CostChart result={result} />
           </div>
-          <div className="mt-10">
-            <ArchitectureRecommendation
-                provider={result?.recommended_provider}
-            />
-          </div>
+          
           <div className="mt-10">
             <ArchitectureDiagram
                 provider={result?.recommended_provider}

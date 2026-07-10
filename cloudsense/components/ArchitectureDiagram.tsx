@@ -51,7 +51,7 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* AWS */}
 
-      {normalizedProvider.includes("aws")&& (
+      {(normalizedProvider.includes("aws"))&& (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">
@@ -93,7 +93,7 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* Azure */}
 
-      {normalizedProvider.includes("azure") && (
+      {(normalizedProvider.includes("azure") )&& (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">
@@ -135,8 +135,8 @@ export default function ArchitectureDiagram({ provider }: Props) {
 
       {/* GCP */}
 
-      {normalizedProvider.includes("gcp") ||
-        normalizedProvider.includes("google") && (
+      {(normalizedProvider.includes("GCP") ||
+        normalizedProvider.includes("google") )&& (
         <div className="flex flex-col items-center">
 
           <Box color="bg-blue-100">
